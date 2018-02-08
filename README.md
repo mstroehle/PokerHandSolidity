@@ -28,7 +28,7 @@ Return list of cards for tie breaker is pretty basic and could be updated easily
     (handVal, result) = poker.evaluateHand(hand);
 
 Example returns:
-    ()HandEnum.HighCard, [Jack, Eight, Six, Three, Two])
+    (HandEnum.HighCard, [Jack, Eight, Six, Three, Two])
 
 This project and uses [truffle](https://github.com/trufflesuite/truffle) Ethereum smart contracts development framework. In order to run it, install truffle first:
 
