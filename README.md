@@ -9,22 +9,26 @@ This is still a work in progress and can definitely be improved, optimized, and 
 Library for handling of poker hands consisting of cards numbered 0-51
 Ace = 0, King = 12 in the suits Clubs, Diamonds, Hearts, Spades
 
-Function: 	evaluateHand takes a list of 5 cards (0-51)
+Function: 	
+evaluateHand takes a list of 5 cards (0-51)
 
-Returns:  	enum of Hand type and up to 5 values of the cards sorted to break ties
+Returns:
+enum of Hand type and up to 5 values of the cards sorted to break ties
 
-Notes: 		State of the art poker hand evals use data tables and hash to run fast.
-			For in contract, wanted an old school analytic approach with low memory or external data
-			Return list of cards for tie breaker is pretty basic and could be updated easily to a hash value
+Notes: 		
+State of the art poker hand evals use data tables and hash to run fast.
+For in contract, wanted an old school analytic approach with low memory or external data
+Return list of cards for tie breaker is pretty basic and could be updated easily to a hash value
 
 ### Usage
 
-int8[5] memory hand = [ int8(PokerHandUtils.CardId.Six_Clubs), int8(PokerHandUtils.CardId.Three_Clubs), int8(PokerHandUtils.CardId.Jack_Diamonds), int8(PokerHandUtils.CardId.Two_Clubs), int8(PokerHandUtils.CardId.Seven_Clubs)];
-PokerHandUtils.HandEnum handVal;
-int8[5] memory result;
-(handVal, result) = poker.evaluateHand(hand);
+    int8[5] memory hand = [ int8(PokerHandUtils.CardId.Six_Clubs), int8(PokerHandUtils.CardId.Three_Clubs), int8(PokerHandUtils.CardId.Jack_Diamonds), int8(PokerHandUtils.CardId.Two_Clubs), int8(PokerHandUtils.CardId.Seven_Clubs)];
+    PokerHandUtils.HandEnum handVal;
+    int8[5] memory result;
+    (handVal, result) = poker.evaluateHand(hand);
 
-Example returns (HandEnum.HighCard, [Jack, Eight, Six, Three, Two])
+Example returns:
+    ()HandEnum.HighCard, [Jack, Eight, Six, Three, Two])
 
 This project and uses [truffle](https://github.com/trufflesuite/truffle) Ethereum smart contracts development framework. In order to run it, install truffle first:
 
